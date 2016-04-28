@@ -2,6 +2,7 @@
 published: true
 title: Using Rx in Node to load requests in parallel
 layout: post
+tags: [Rx, Node, Parallel]
 ---
 # Using Rx in Node to load requests in parallel
 
