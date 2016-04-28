@@ -10,7 +10,6 @@ With RxJs, this is pretty simple to do.
 
 As a skeleton, we use the next code:
 
-
 ```javascript
 communityContract.getClaimsCount((error, claimsCount) => {
     if (error) {
@@ -50,6 +49,7 @@ We are then going to use the `flatMap` operator to load all claim properties for
 (By the way, the `rxHelper` is just a helper class which implements some convenient methods. The full code is included at the end of this blog).
 
 The `flatMap` operator flattens a series of child observables to the main observable stream. In it, we can call the necessary requests to get all properties from a claim:
+
 ```javascript
 .flatMap((counter) => {
     let index = counter - 1; // zero based
@@ -64,6 +64,7 @@ The `flatMap` operator flattens a series of child observables to the main observ
 RxJs gives us the handy `Rx.Observable.fromNodeCallback` shortcut to transform a method with a Node callback to an observable.
 
 The next step in our flow is subscribing to the observable stream in order to get the combined results:
+
  ```javascript
 .subscribe((combinedResult) => {
     let claim = mapGetClaimResultToClaim(combinedResult[1]);
@@ -88,6 +89,7 @@ And that's it. We now have working code to first get the number of claims, and t
 Rx handles the async orchestration.
 
 ### This is the full code: 
+
 ```javascript
 communityContract.getClaimsCount((error, claimsCount) => {
     if (error) {
@@ -138,6 +140,7 @@ communityContract.getClaimsCount((error, claimsCount) => {
 ```
 
 ### And this is the full code of the `rxHelper`:
+
 ```javascript
 'use strict';
 
