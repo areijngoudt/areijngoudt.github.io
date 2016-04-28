@@ -4,8 +4,6 @@ title: Using Rx in Node to load requests in parallel
 layout: post
 tags: [Rx, Node, Parallel]
 ---
-# Using Rx in Node to load requests in parallel
-
 Sometimes you need to load some requests in parallel before returning the joint results. 
 With RxJs, this is pretty simple to do.
 
