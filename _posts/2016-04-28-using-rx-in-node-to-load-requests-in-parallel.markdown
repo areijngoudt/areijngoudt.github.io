@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Using Rx in Node to load requests in parallel
 layout: post
 ---
@@ -156,4 +156,4 @@ function handleResponse(error, response, observer) {
         observer.onCompleted();
     }
 }
-``` 
+```
