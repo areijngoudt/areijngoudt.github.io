@@ -1,0 +1,10 @@
+excerpt_separator: ""
+pygments: true
+markdown: kramdown
+url: http://areijngoudt.github.io
+title: Coding by Art
+email: areijngoudt@gmail.com
+author: Ad Reijngoudt
+description: A blog about code
+paginate: 3
+google_analytics: 
